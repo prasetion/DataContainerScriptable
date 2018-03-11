@@ -24,7 +24,7 @@ public class FlexibleUIButton : FlexibleUI {
 		base.OnSkinUI();
 
 		_image = GetComponent<Image>();
-		_icon = _image.GetComponentInChildren<Image>();
+		_icon = transform.Find("Icon").GetComponent<Image>();
 		_button = GetComponent<Button>();
 
 		_button.transition = Selectable.Transition.SpriteSwap;
